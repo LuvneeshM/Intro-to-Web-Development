@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic UL Navbar</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			font-family: Helvetica, Arial, sans-serif;
+		}
+
+		ul{
+			/*remove bullet points*/
+			list-style-type: none;
+			overflow: hidden;
+			background-color: #999;
+		}
+
+		li{
+			/* float first and then we will switch to inline*/
+			/*float: left;*/
+			/*use inline*/
+			display: inline-block;
+		}
+		/*anchor tags in the li items*/
+		li a{
+			/*anchor tags by default display inline*/
+			/*here we are telling them to behave like block elements*/
+			/*Making the anchor block and adding dimensions padding we get a bigger clickable aread for the user to select*/
+			display: block;
+			text-align: center;
+			width:100px;
+			padding: 10px;
+			/*color and no underline*/
+			color: #333;
+			text-decoration: none;
+		}
+
+		li a:hover{
+			background: #111;
+			color: white;
+		}
+		
+		li a.active{
+			background: #777;
+		}
+
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#" class="active">home</a></li>
+		<li><a href="#" >about</a></li>
+		<li><a href="#" >news</a></li>
+		<li><a href="#" >contact</a></li>
+	</ul>
+</body>
+</html>
