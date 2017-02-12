@@ -130,7 +130,7 @@
         background: #555; 
     }
     /*make a drop down menu for available recipes on page*/
-    .nav_bar_a, li a .dd {
+    .nav_bar_a{
         display: block;
         color: rgb(255, 255, 255);
         /* color of text to see on grayish backround */
@@ -141,26 +141,36 @@
         /*give borders to each  */
     }
     
-    .nav_bar_a:hover {
+    .nav_bar_a:hover, .dd:hover {
         background-color: rgb(0, 0, 0);
         /*hover over changes color a bit*/
     }
 
-    /*.dd{
-        position: relative;
+    header nav ul li.dd{
         display: inline-block;
-    }*/
-    .dd-content{
+    }
+    header nav ul li .dd-content{
         /*hide the content of drop down*/
         display: none;
         position: absolute;
         background-color: cornsilk;
-        width: 100%
+        width: 25%;
         -webkit-box-shadow:5px 5px 5px 5px rgba(10,10,10,0.5); /* older chrome and safair */ 
         -moz-box-shadow:5px 5px 5px 5px rgba(10,10,10,0.5); /* mozilla */
-        box-shadow: 5px 5px 5px 5px rgba(10,10,10,0.5);
-        padding: 12px 16px; 
-        
+        /*box-shadow: x shadow width | y shadow height | blur | spread | color*/
+        box-shadow: 2px 2px 10px 5px rgba(10,10,10,0.5);
+    }
+
+    .dd-content a{
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+    }
+
+    .dd-content a:hover {
+        background-color: white;
     }
 
     .dd:hover .dd-content{
@@ -183,8 +193,8 @@
                 <li class="dd">
                     <a class="nav_bar_a clear_fix" href="#">Recipes</a>
                     <div class="dd-content">
-                        <a href="#">Test</a>
-                        <a href="#">Test2</a>
+                        <a href="#">Steammed Cabbage with Tofu Pepper Filling</a>
+                        <a href="#">Vietnamese Salad Rolls</a>
                     </div>
                 </li>
                 <li><a class="nav_bar_a clear_fix" href="#">About</a></li>
