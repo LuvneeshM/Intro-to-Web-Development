@@ -38,14 +38,7 @@
     header li{
         width: 25%;
         float: left/* stack to the left as long as there is space using float  */
-    }
-/*
-    .nav_bar_li {
-        width: 25%;
-        float: left/* stack to the left as long as there is space using float  *
-    }
-  */  
-    
+    }    
     
     .clear_fix::after {
         display: block;
@@ -59,7 +52,7 @@
     }
     /*for recipe*/
     
-    .vegetarian {
+    #vegetarian, #meat {
         padding: 0px 20px;
     }
     
@@ -193,8 +186,8 @@
                 <li class="dd">
                     <a class="nav_bar_a clear_fix" href="#">Recipes</a>
                     <div class="dd-content">
-                        <a href="#">Steammed Cabbage with Tofu Pepper Filling</a>
-                        <a href="#">Vietnamese Salad Rolls</a>
+                        <a href="#vegetarian">Steammed Cabbage with Tofu Pepper Filling</a>
+                        <a href="#meat">Vietnamese Salad Rolls</a>
                     </div>
                 </li>
                 <li><a class="nav_bar_a clear_fix" href="#">About</a></li>
@@ -204,7 +197,7 @@
     </header>
     <!-- main content of page -->
     <main>
-        <div class="vegetarian">
+        <div id="vegetarian">
             <!-- sub_head -->
             <div class="recipe_sub_head">
                 <h2>Steammed Cabbage with Tofu Pepper Filling</h2>
@@ -250,7 +243,7 @@
                 </ol>
             </div>
         </div>
-        <div class="meat">
+        <div id="meat">
             <!-- sub_head -->
             <div class="recipe_sub_head">
                 <h2>Vietnamese Salad Rolls</h2>
