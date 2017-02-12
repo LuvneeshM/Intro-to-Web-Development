@@ -35,9 +35,9 @@ body{
 	border:10px solid cornflowerblue;
 	border-bottom: 45px solid cornflowerblue;
 	/*box-shadow: x shadow width | y shadow height | blur | spread | color*/
-	-webkit-box-shadow:5px 5px 5px 5px rbga(10,10,10,0.5); /* older chrome and safair */ 
-	-moz-box-shadow:5px 5px 5px 5px rbga(10,10,10,0.5); 
-	box-shadow: 5px 5px 5px 5px  rbga(10,10,10,0.5) ;
+	-webkit-box-shadow:5px 5px 5px 5px rgba(10,10,10,0.5); /* older chrome and safair */ 
+	-moz-box-shadow:5px 5px 5px 5px rgba(10,10,10,0.5); 
+	box-shadow: 5px 5px 5px 5px  rgba(10,10,10,0.5) ;
 	
 }
 

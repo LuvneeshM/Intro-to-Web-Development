@@ -24,7 +24,7 @@
         margin: 0;
         padding: 0;
         /*background color is grayish*/
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.4);
     }
     
     .nav_bar_ul {
@@ -99,18 +99,19 @@
     
     .ingredient_image {
         float: left;
-        text-align: center;
+        margin: 0 auto;
     }
     
     .image_caption {
         margin: 0px;
     }
+
     /* directions section */
-    
     .directions_container {
         padding: 10px;
         margin: 0px;
     }
+
     /*footer*/
     .people {
         float: left;
@@ -132,6 +133,32 @@
 		padding-left: 20px;
 		text-align: right;
     }
+
+    /*new stuff for week 3*/
+    li a.pageActive{
+        background: #555; 
+    }
+    /*make a drop down menu for available recipes on page*/
+    header li a.dd{
+        position: relative;
+        display: inline-block;
+    }
+    header li a.dd-content{
+        /*hide the content of menu*/
+        display: none;
+        position: absolute;
+        background-color: cornsilk;
+        min-width: 160px;
+        -webkit-box-shadow:5px 5px 5px 5px rgba(10,10,10,0.5); /* older chrome and safair */ 
+        -moz-box-shadow:5px 5px 5px 5px rgba(10,10,10,0.5); /* mozilla */
+        box-shadow: 5px 5px 5px 5px rgba(10,10,10,0.5);
+        
+    }
+
+    header li a.dd:hover .dd-content{
+        display: block; 
+    }
+
     </style>
     <!-- Used for soical link icons -->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
@@ -144,8 +171,15 @@
         <h1>Steamed Cabbage Recipes</h1>
         <nav class="nav_bar_header">
             <ul class="nav_bar_ul">
-                <li class="nav_bar_li"><a class="nav_bar_a clear_fix" href="#">Home</a></li>
-                <li class="nav_bar_li"><a class="nav_bar_a clear_fix" href="#">Recipes</a></li>
+                <li class="nav_bar_li"><a class="nav_bar_a clear_fix pageActive" href="#">Home</a></li>
+                <li class="nav_bar_li"><a class="nav_bar_a clear_fix" href="#">Recipes</a>
+                    <div class="dd">
+                        <div class="dd-content">
+                            <a href="#">Test</a>
+                            <a href="#">Test2</a>
+                        </div>
+                    </div>
+                </li>
                 <li class="nav_bar_li"><a class="nav_bar_a clear_fix" href="#">About</a></li>
                 <li class="nav_bar_li"><a class="nav_bar_a clear_fix" href="#">Contact Us</a></li>
             </ul>
