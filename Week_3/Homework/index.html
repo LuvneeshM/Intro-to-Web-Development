@@ -35,26 +35,17 @@
         /* hide the overflow of block element*/
     }
     
-    .nav_bar_li {
+    header li{
         width: 25%;
         float: left/* stack to the left as long as there is space using float  */
     }
-    
-    .nav_bar_a {
-        display: block;
-        color: rgb(255, 255, 255);
-        /* color of text to see on grayish backround */
-        text-align: center;
-        padding: 3% 3%;
-        text-decoration: none;
-        border-right: 1px solid rgb(255, 255, 255);
-        /*give borders to each	*/
+/*
+    .nav_bar_li {
+        width: 25%;
+        float: left/* stack to the left as long as there is space using float  *
     }
+  */  
     
-    .nav_bar_a:hover {
-        background-color: rgb(0, 0, 0);
-        /*hover over changes color a bit*/
-    }
     
     .clear_fix::after {
         display: block;
@@ -139,23 +130,40 @@
         background: #555; 
     }
     /*make a drop down menu for available recipes on page*/
-    header li a.dd{
+    .nav_bar_a, li a .dd {
+        display: block;
+        color: rgb(255, 255, 255);
+        /* color of text to see on grayish backround */
+        text-align: center;
+        padding: 3% 3%;
+        text-decoration: none;
+        border-right: 1px solid rgb(255, 255, 255);
+        /*give borders to each  */
+    }
+    
+    .nav_bar_a:hover {
+        background-color: rgb(0, 0, 0);
+        /*hover over changes color a bit*/
+    }
+
+    /*.dd{
         position: relative;
         display: inline-block;
-    }
-    header li a.dd-content{
-        /*hide the content of menu*/
+    }*/
+    .dd-content{
+        /*hide the content of drop down*/
         display: none;
         position: absolute;
         background-color: cornsilk;
-        min-width: 160px;
+        width: 100%
         -webkit-box-shadow:5px 5px 5px 5px rgba(10,10,10,0.5); /* older chrome and safair */ 
         -moz-box-shadow:5px 5px 5px 5px rgba(10,10,10,0.5); /* mozilla */
         box-shadow: 5px 5px 5px 5px rgba(10,10,10,0.5);
+        padding: 12px 16px; 
         
     }
 
-    header li a.dd:hover .dd-content{
+    .dd:hover .dd-content{
         display: block; 
     }
 
@@ -171,17 +179,16 @@
         <h1>Steamed Cabbage Recipes</h1>
         <nav class="nav_bar_header">
             <ul class="nav_bar_ul">
-                <li class="nav_bar_li"><a class="nav_bar_a clear_fix pageActive" href="#">Home</a></li>
-                <li class="nav_bar_li"><a class="nav_bar_a clear_fix" href="#">Recipes</a>
-                    <div class="dd">
-                        <div class="dd-content">
-                            <a href="#">Test</a>
-                            <a href="#">Test2</a>
-                        </div>
+                <li><a class="nav_bar_a clear_fix pageActive" href="#">Home</a></li>
+                <li class="dd">
+                    <a class="nav_bar_a clear_fix" href="#">Recipes</a>
+                    <div class="dd-content">
+                        <a href="#">Test</a>
+                        <a href="#">Test2</a>
                     </div>
                 </li>
-                <li class="nav_bar_li"><a class="nav_bar_a clear_fix" href="#">About</a></li>
-                <li class="nav_bar_li"><a class="nav_bar_a clear_fix" href="#">Contact Us</a></li>
+                <li><a class="nav_bar_a clear_fix" href="#">About</a></li>
+                <li><a class="nav_bar_a clear_fix" href="#">Contact Us</a></li>
             </ul>
         </nav>
     </header>
