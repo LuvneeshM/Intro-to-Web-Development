@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+/* font-family: 'Kaushan Script', cursive; */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	background: url(../img/bg.jpg) no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+/*Navigation*/
+header{
+	width: 80%;
+	padding: 0 10%;
+	height: 50px;
+	position:  fixed;
+	margin-bottom: 10px;
+	z-index: 10; /*as you add things to page, the last layers you drew will always be to top*/
+	background-color: black();
+	background-image: url(../img/tweed.png);
+}
+
+header h1{
+	display: inline-block;
+	color: white;
+	font-family: 'Kaushan Script', cursive;
+}
+
+nav{
+	float: right;
+	display: inline-block;
+}
+
+nav ul{
+	list-style-type: none;
+	text-align: center;
+	background-color: rgba(40,40,40,0.1);
+}
+
+nav li{
+	font-family: 'Kaushan Script', cursive;
+	font-size: 18px;
+	height: 50px;
+	line-height: 50px;
+	width: 120px ;
+	display: inline-block;
+}
+
+nav a{
+	text-decoration:none;
+	color: #FFF;
+	display: block;
+	transition: all 1s;
+}
+
+nav a.active{
+	background-color: white;
+	color: #444;
+}
+
+nav a:hover, nav a.active:hover{
+	background-color: rgba(10,10,10, 0.5);
+	color: white;
+}
+
+
+
+/*everything in body will have the kaushan script unless over written*/
+body{
+	font-family: 'Kaushan Script', cursive;
+}
+
+.container{
+	width:900px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+.polaroid{
+	position: relative;
+	width: 240px;
+	display: inline-block;
+	margin: 20px;
+}
+
+/* descendant selector to only target images within the polaroid divs*/
+.polaroid img{
+	width: 100%;
+	height: auto;
+	border:10px solid cornflowerblue;
+	border-bottom: 45px solid cornflowerblue;
+	/*box-shadow: x shadow width | y shadow height | blur | spread | color*/
+	-webkit-box-shadow:5px 5px 5px 5px rgba(10,10,10,0.5); /* older chrome and safair */ 
+	-moz-box-shadow:5px 5px 5px 5px rgba(10,10,10,0.5); 
+	box-shadow: 5px 5px 5px 5px  rgba(10,10,10,0.5) ;
+	
+}
+
+.polaroid p{
+	position: absolute;
+	text-align: center;
+	width:100%;
+	bottom: 10px;	
+	color: #111;
+}
+
+/*Transitions*/
+.rotate-left{
+	transform: rotate(-10deg);
+	z-index: 100;
+	transition: all 5s ease;
+}
+
+.rotate-left:hover{
+	transform: rotate(10deg);
+}
+
+.scale2x{
+	transform: scale(1);
+	transition: all 5s ease;
+}
+
+.scale2x:hover{
+	transform: scale(2);
+	z-index: 100;
+}
+
+.scaleX{
+	transform: scale(2,1); /* scale x, y */
+}
+
+.skewX{
+	transform: skewX(-20deg);
+}
+
+.skewY{
+	transform: skewY(-20deg);
+}
+
+.skewBoth{
+	transform: skew(10deg, 30deg);
+}
+
+.rotX{
+	transform: rotateX(120deg);
+}
+
+.rotY{
+	transform: rotateY(120deg);
+}
+
+.rotZ{
+	transform: rotateZ(120deg);
+}

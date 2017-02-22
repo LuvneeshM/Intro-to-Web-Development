@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Respponsive Dropdown</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding:0px;
+		}
+
+		/*generic clearfix class for when we use floats
+		apply clearfix class to the container element, not the items that are floating 
+		aka to the parent elements*/
+		.clear-fix:after{
+			display: block;
+			clear: both;
+			content: '';
+			/* ensure backwars compatibility */
+			height: 0;
+			font-size: 0;
+			visibility: hidden;
+		}
+
+		/* Remove Bullet Points to make ul more like nav wrapper */
+		nav ul{
+			list-style-type: none;
+			position: relative;
+			background-color: grey;
+		}
+
+		nav ul li{
+			width: 100px;
+			float: left;
+			height: 30px;
+			line-height: 30px;
+		}
+
+		/* change navbar item color on hover*/
+		nav ul li:hover{
+			background: #ddd;
+		}
+
+		nav ul li a{
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			color: black;
+		}
+
+		/* hide any sublist by default */
+		nav ul ul{
+			display: none;
+			background-color: #DDD;
+		}
+
+		nav ul ul li{
+			width: 200px;
+		}
+
+		nav ul ul a{
+			text-align: left;
+			padding-left: 15px;
+		}
+		
+		/* selects all <ul> elements where their parents are an unordered list with the mouse hovering over it*/
+		nav ul li:hover > ul{
+			display: block;
+		}
+		
+		nav ul li:hover > ul li{
+			background-color: #999;
+		}
+
+		nav ul li:hover > ul li:hover{
+			background-color: #F42963;
+		}
+
+		@media only screen and  (max-width: 767px){
+			nav ul li{
+				width: 100%;
+				display: block;
+			}
+			nav ul ul li{
+				width: 100%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<nav id="main-nav"> 
+		<ul>
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a>
+				<ul>
+					<li><a href="#">Goats</a></li>
+					<li><a href="#">Chickens</a></li>
+					<li><a href="#">Pigs</a></li>
+					<li><a href="#">Sheep</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Link 3</a></li>
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a>
+				<ul>
+					<li><a href="#">Goats</a></li>
+					<li><a href="#">Chickens</a></li>
+					<li><a href="#">Pigs</a></li>
+					<li><a href="#">Sheep</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Link 3</a></li>
+		</ul>
+	</nav>
+
+</body>
+</html>
