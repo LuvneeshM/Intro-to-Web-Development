@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
@@ -70,4 +70,9 @@ header nav ul a {
     color: #000;
     display: block;
     transition: all 1s;
+}
+
+nav a:hover{
+	background-color: rgba(10,10,10,0.5);
+	color: white;
 }
