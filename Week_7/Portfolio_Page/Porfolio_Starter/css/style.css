@@ -1,0 +1,151 @@
+/*
+Responsive 996px grid system ~ Style CSS.
+Copyright 2013, Josh Cope
+*/
+
+
+/* =============================================================================
+   Site Styles
+   ========================================================================== */
+
+div.hero {
+    width: 100vw;
+}
+
+.hero img {
+    width: 100%;
+}
+
+.hero article {
+    position: absolute;
+    width: 50%;
+    top: 60%;
+    right: 0%;
+    padding: 2%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0000f+0,0000ff+100&0.5+1,0.3+100 */
+    background: -moz-linear-gradient(left, rgba(240, 0, 15, 0.5) 0%, rgba(238, 0, 17, 0.5) 1%, rgba(0, 0, 255, 0.3) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(240, 0, 15, 0.5) 0%, rgba(238, 0, 17, 0.5) 1%, rgba(0, 0, 255, 0.3) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    
+    background: linear-gradient(to right, rgba(240, 0, 15, 0.5) 0%, rgba(238, 0, 17, 0.5) 1%, rgba(0, 0, 255, 0.3) 100%);
+    
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#80f0000f', endColorstr='#4d0000ff', GradientType=1);
+    /* IE6-9 */
+}
+
+.thumb {
+    position: relative;
+    /*when we scale our image we hover club the overflow*/
+    overflow: hidden;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.mask p {
+    font-style: italic;
+}
+
+a.info,
+button {
+    display: inline-block;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+}
+
+.thumb:hover .mask {
+    opacity: 1;
+}
+
+
+/*Initial vlaues for our hideen items*/
+
+.thumb .mask h2,
+.thumb .mask p,
+.thunb .mask a {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1s ease;
+}
+
+.thumb:hover .mask h2,
+.thumb:hover .mask p,
+.thumb:hover .mask a {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/*prepare some initial values for our image to change on hover*/
+
+.thumb img {
+    transform: scale(1) rotate(0deg);
+    transition: all 1s ease;
+}
+
+.thumb:hover img {
+    transform: scale(1.5) rotate(120deg);
+}
+
+
+/* =============================================================================
+   Page Styles
+   ========================================================================== */
+
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+
+/* Tablet Portrait size to Base 996px */
+
+@media only screen and (min-width: 768px) and (max-width: 995px) {}
+
+
+/* All Mobile Sizes */
+
+@media only screen and (max-width: 767px) {}
+
+
+/* Mobile Landscape Size to Tablet Portrait */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+
+@media only screen and (max-width: 479px) {}
+
+
+/* =============================================================================
+   Font-Face
+   ========================================================================== */
+
+
+/* This is the proper syntax for an @font-face file
+
+/* @font-face {
+font-family: 'FontName';
+src: url('../fonts/FontName.eot');
+src: url('../fonts/FontName.eot?iefix') format('embedded-opentype'),
+url('../fonts/FontName.woff') format('woff'),
+url('../fonts/FontName.ttf') format('truetype'),
+url('../fonts/FontName.svg#FontName') format('svg');
+font-weight: normal;
+font-style: normal; }
