@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adding to the Dom</title>
+</head>
+
+<body>
+    <button onclick="addSingleP()">Add a Single P Function (bad way)</button>
+    <button onclick="addMultipleP(8)">Add 10 P using a loop and nodes (good way)</button>
+    <div id="content">
+        <!-- this div will be populated by javascript functions -->
+    </div>
+    <script type="text/javascript">
+    //declare global variables first
+    var content;
+    //since our script leads after our html, we can assign the value here
+    content = document.getElementById('content');
+    console.log(content.innerHTML);
+
+    //lazy dom creation
+    function addSingleP() {
+        //add a p tag via string + inner html
+        content.innerHTML = "<p>this is a single paragraph tag added the bad way</p>";
+    }
+
+    function addMultipleP(num) {
+        for (var i = 0; i < num; i++) {
+            console.log(i);
+            var p = document.createElement('P');
+            //crease some text to append to the empty paragraph we judt created
+            var text = document.createTextNode("this is para # " + i);
+            //attac text into our pagraph element
+            p.appendChild(text);
+            content.appendChild(p);
+        }
+    }
+    </script>
+</body>
+
+</html>

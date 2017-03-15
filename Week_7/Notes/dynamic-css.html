@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Toggle Class of Element via JS</title>
+    <style>
+    .active {
+        background-color: #006FFF;
+        color: white;
+        font-size: 60px;
+    }
+    </style>
+    <script type="text/javascript">
+    function toggleActive() {
+        //grab out h1 element and place it in a var
+        var element = document.getElementById("changeMe");
+        //conditional to check if my element already has the clss active in its class list
+        console.log(element.classList);
+
+        if (element.classList.contains('active')) {
+            element.classList.remove('active');
+            element.innerHTML = "Not active";
+        } else {
+            element.classList.add('active');
+            element.innerHTML = "I am active";
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <h1 id="changeMe" onclick="toggleActive()" class="dummy">This is a heading, click me to toggle my active class on off.</h1>
+</body>
+
+</html>

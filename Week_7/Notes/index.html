@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Data Types</title>
+	<!-- java script lives between script tags -->
+	<script type="text/javascript">
+		//convering data types
+		var myVar; //declare a variable
+		myVar = "number"; //assign a string value to my var
+
+		console.log(myVar);
+		console.log(typeof myVar);
+		//reassign a number/int to myVar
+		myVar = "8";
+		console.log(myVar);
+		console.log(typeof myVar);
+
+		var myVar2 = 2*myVar;
+		console.log(myVar2);
+		console.log(typeof myVar2);
+
+		var parseMe = "word 8";
+		console.log(parseInt(parseMe));
+
+		var temp = 10;
+		console.log("Temp is " + temp + " degrees?"); 
+
+		//functions
+		//function is reusable
+		function sumVals(a,b){
+			var sum = a+b;
+			alert(sum);
+		}
+
+		//call function
+		sumVals(2,3);
+
+		var isOn = true;
+		function switchOnOff(){
+			if(isOn === true){
+				alert("isOn is " + isOn);
+				isOn = !isOn;
+			}
+			else{
+				alert("isOn is " + isOn);
+				isOn = !isOn;
+			}
+		}
+
+		function countToN(n){
+			for(var i = 0; i < n; i++){
+				console.log(i);
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<button onclick="sumVals(67,12.12)"> Sum Values</button>
+	<button onclick="switchOnOff()">Switch</button>
+	<button onclick="countToN(5)">Coun<t/button>
+</body>
+</html>

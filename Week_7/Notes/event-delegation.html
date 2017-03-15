@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Delegation and Toggle</title>
+
+	<style>
+		.active{
+			color: red;
+			font-size = 20px;
+		}
+	</style>
+	<script type="text/javascript">
+	function alertMe(){
+		alert("HELLO"); 
+	}
+
+
+	//add a function to wathc and wait for the dom content to completely load
+	document.addEventListener("DOMContentLoadeded", function(){
+		//anything that happens here inside the anon function will only fire when the page is fully loaded, this is a good place to grab elements and place them in vars
+		console.log("fully loaded and parsed");
+		document.getElementById("alertBtn").addEventListener("click", alertMe);
+
+		document.getElementById("toggleMe").addEventListener("click", function(e){
+			//log put the event object and expand it in console
+			console.log(e);
+			console.log(e.target);
+			//toggle on off class list
+			element.classList.toggle("active");
+		})
+
+	});
+</script>
+
+</head>
+<body>
+<p id="toggleMe">Just a p tag to toggle class with evenet listener</p>
+<button id="alertBtn">Click to Fire a Function with add evenet listener</button>
+
+</body>
+</html>
