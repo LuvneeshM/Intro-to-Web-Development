@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays 101</title>
+	<script type="text/javascript">
+		var months;
+		console.log(months);
+		months = [];
+		console.log(months);
+		console.log(typeof months);
+
+		months = ['jan', 'feb', 'march', 'april', 'may'];
+		console.log(months.length);
+
+		//remove last month and assgn into another variable
+		var lastMonth = months.pop();
+		console.log(months.length);
+		console.log(months);
+		console.log("Last Month removed " + lastMonth);
+
+		console.log("2nd item " + months[1]);
+
+		months.push("JUNE");
+		months.push(lastMonth);
+		console.log(months);
+
+		for(var i = 0; i < months.length; i++){
+			console.log(months[i]);
+		}
+
+		// for(var i = months.length; i > 0; i--){
+		// 	var dm = months.pop();
+		// 	console.log("Deleted " + dm + " new length is " + months.length);
+		// }
+
+		var rn = Math.floor(Math.random() * months.length);
+		console.log(months[rn]);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

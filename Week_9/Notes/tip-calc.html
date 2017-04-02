@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tip Calc</title>
+	<style type="text/css">
+		div.well{
+			background-color: #DDD;
+			border-radius: 10px;
+			min-height: 20px;
+			width: 300px;
+			padding: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		//wait for page to finish rendering and add an event listener to our button
+		document.addEventListener("DOMContentLoaded", function(){
+			//grab button once rather than storing it as a variable we can just grab it and add event listener to it
+			document.getElementById("tipBtn").addEventListener("click", calcTip);
+		});
+
+		function calcTip(){
+			var b = document.getElementById('bill').value;
+			var arrTip = document.getElementsByName("tip");
+			var result = document.getElementById("tipOutput"); 
+			var per;
+
+			b = parseFloat(b);
+
+			for (var i = 0; i < arrTip.length; i++) {	
+				if(arrTip[i].checked){
+					per = arrTip[i].value;
+					break;
+				}
+			}
+			per = parseFloat(per);
+			var tip = b * per;
+			tip = moneyRound(tip);
+			console.log(tip);
+
+			//grab output div
+			output = document.getElementById("tipOutput");
+			output.innerHTML = "";
+			//3 empty paragraphs in dom
+			var p1 = document.createElement("P");
+			var p2 = document.createElement("P");
+			var p3 = document.createElement("P");
+			
+			var t1 = document.createTextNode("Bill is: " + b);
+			var t2 = document.createTextNode("Tip is: " + tip);
+			var total = b + tip;
+			var t3 = document.createTextNode("Total is: " + total);
+
+			//append text nodes to proper ps
+			p1.appendChild(t1);
+			p2.appendChild(t2);
+			p3.appendChild(t3);
+			//append ps with proper text to the output div
+			output.appendChild(p1);
+			output.appendChild(p2);
+			output.appendChild(p3);
+		}
+
+		function moneyRound(num){
+			var roundNum = Math.ceil(num*100)/100;
+			return roundNum;
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Tip Calc</h1>
+	<form>
+		<label for="bill">Bill: </label>
+		<input type="number" name="bill" id="bill" min="0" step="0.01" value="10" required>
+		<br>
+		<p>Select your tip percentage</p>
+		<label>
+            <input type="radio" name="tip" value="0.05"> 5%
+        </label>
+        <label>
+            <input type="radio" name="tip" value="0.10" checked> 10%
+        </label>
+        <label>
+            <input type="radio" name="tip" value="0.15"> 15%
+        </label>
+        <label>
+            <input type="radio" name="tip" value="0.20"> 20%
+        </label>	
+		<br>
+		<!-- type = button so the page does not refresh, it should be type=submit when posting form data to a script or database -->
+		<button type="button" class="btn" id="tipBtn">Calculate Tip</button>
+	</form>
+	<div class="well" id="tipOutput"></div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math JS</title>
+	<script type="text/javascript">
+		//Integers - whole numbers
+		var x = 15;
+		var y = 35;
+		// var z; 
+		// z = 10;
+
+		//Simple math
+		console.log(x+y);
+		console.log(x-y);
+		console.log(x*y);
+		console.log(x / y);
+		//mod
+		console.log(y%x);
+		//order of operations
+		console.log((x+y)*y-1);
+
+		//increment by 1
+		console.log(x++);
+		console.log(x--);
+		//decrement by 1
+		console.log(x);
+
+		//floats and math
+		var z = 2.25;
+		var zDwn = Math.floor(z);
+		console.log(zDwn);
+		var zUp = Math.ceil(z);
+		console.log(zUp);
+
+		var n1 = 2.2;
+		var n2 = 2.7;
+		console.log(Math.round(n1));
+		console.log(Math.round(n2));
+
+		var r = Math.random();
+		console.log(r);
+
+		var yn = Math.round(Math.random());
+		console.log(yn == 0? 'true' : 'false');
+
+		function randNum(n){
+			var rn = Math.round(n * Math.random());
+			console.log(rn);
+		}
+		randNum(100);
+
+		var test;
+		function randNumRange(min, max) {
+			var rn = Math.round(Math.random()*(max-min)  + min);
+			//console.log(rn);
+			test = rn;
+			return rn;
+		}
+		randNumRange(25,35);
+		console.log(randNumRange(6,23));
+		var myRandon = randNumRange(10,20);
+
+	</script>
+
+</body>
+</html>
