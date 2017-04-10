@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQ vs JS</title>
+	<!-- load JQuery first before tryin to use it -->
+	<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous">
+	</script>
+	<!-- now write our custom scripts after it is loaded -->
+	<script type="text/javascript">
+		// onload listener JS
+		document.addEventListener('DOMContentLoaded',function(){});
+		// onload listener in JQ
+		$(document).ready(function(){
+			//do stuff when the page laods
+			// getElementById add event listener on click
+			$('#myID').click(function(){
+				$(this).html('You Clicked ME');
+			});
+
+			// document.getElementsByTagName('P') = $('p')
+			// returns an array of all elements with the tag P
+			console.log($('p'));
+
+			// documents.getElementsByClassName('goat') = $('.goat')
+			console.log($('.goat'));
+
+			// document.querySelector('li') = $('li:first');
+			console.log($('li:first'));
+		});
+
+
+	</script>
+</head>
+<body>
+	<div id="myID">THis is a div to grab with a jquesry selector</div>
+	<p class="goat">Para 1</p>
+	<p class="goat">Para 2</p>
+	<p class="goat">Para 3</p>
+	<p class="goat">Para 4</p>
+	
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4</li>
+	</ul>
+
+</body>
+</html>

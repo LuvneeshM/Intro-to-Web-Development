@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON 101</title>
+	<script type="text/javascript">
+		var customer = {
+			firstName: 'Tony',
+			lastName: 'Pony',
+			pets: ['dog', 'cat', 'iguana']
+		}
+
+		console.log(customer)
+		//assess our customer first name using dot notation
+		console.log(customer.firstName)
+		console.log(customer.lastName)
+		//pass in a string as our index in square brackets (this is necessary when we have keys with - in them)
+		console.log(customer['lastName']);
+		console.log(customer.pets[1]);
+		for(var i = 0; i < customer.pets.length; i++){
+			console.log(customer.pets[i]);
+		}
+
+		//add new key value pairs to our objects
+		customer.age = 45;
+		console.log(customer);
+		customer.lastName = 'Bologna';
+		console.log(customer);
+		customer.pets.push('chicken');
+		console.log(console);
+
+		var myClass = { 
+			me: {
+				firstName: "Tony",
+				lastName: "Pony",
+				pets: ["Dog", "Cat", "Iguana"]
+			},
+			others: [
+				{
+				firstName: "Sally",
+				lastName: "Omally",
+				pets: ["ButterFly", "Bird"]
+				},
+				{
+				firstName: "Billy",
+				lastName: "Goat",
+				pets: ["Snake", "Fish"]
+				},
+				{
+				firstName: "Tara",
+				lastName: "Ohara",
+				pets: ["Gecko", "Lizard"]
+				}
+			]
+		};
+
+		// Tony's 3rd pet
+		console.log(myClass.me.pets[2]);
+		// Billy's last name
+		console.log(myClass.others[1].lastName);
+		//the side of others array
+		console.log(myClass.others.length);
+		//the first name of everyone in others array 
+		for(var i = 0; i < myClass.others.length; i++){
+			console.log(myClass.others[i].firstName);
+		}
+		//tara's first pet
+		console.log(myClass.others.find(findTara).pets[0]);
+		//Bonus add another studentObject to others
+		myClass.others.push({
+			firstName: "ss",
+			lastName: "kk",
+			pet: ["Dog"	]
+		});
+		console.log(myClass);
+
+		function findTara(person) {
+			return person.firstName == 'Tara';
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

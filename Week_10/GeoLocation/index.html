@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 Geolocation</title>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', getLocation);
+
+		function getLocation(){
+			if(navigator.geolocation){
+				// setPosition is call back function that gets fired once
+				// a position is returned
+				navigator.geolocation.getCurrentPosition(setPosition);
+			} else{
+				alert('Get a better browser');
+			}
+		}
+
+		//position is passed in from getCurrentPosition
+		//we can call this parameter w/e we like
+		function setPosition(position){
+			console.log(position);
+
+			var lat = position.coords.latitude;
+			var lon = position.coords.longitude;
+
+			var loc = document.getElementById('location');
+			loc.innerHTML = 'Latitude: ' + lat + ' <br>Longitude: ' + lon;
+		}
+
+	</script>
+</head>
+
+<body>
+	<div id="location">
+		<p>Searching for position</p>
+	</div>
+</body>
+</html>
