@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello Green Sock</title>
+	<style type="text/css">
+		#sb{
+			position: absolute;
+			top: 500px;
+			left: 0px;
+		}
+
+	</style>
+</head>
+<body>
+
+<img src="img/soccer-ball.png" id="sb">
+
+<!-- 5 basketballs to animate by shorthand grabbing the elements by class name -->
+<img src="img/basket-ball.png" class="bball">
+<img src="img/basket-ball.png" class="bball">
+<img src="img/basket-ball.png" class="bball">
+<img src="img/basket-ball.png" class="bball">
+<img src="img/basket-ball.png" class="bball">
+
+<!-- Load the full library uite of plugins (this is huge) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script type="text/javascript">
+	
+	// grab our soccerball as a js variabl
+	var sb = document.getElementById('sb');
+	//Use he TweenMax object TO method to animate over 3 secs
+	//TweenMax.to(element(s) to animate, length of animations(secoonds), {options object})
+	// TweenMax.to(sb,3, {left: 800, top: 300});
+	TweenMax.to(sb,3,{x: 800, y: -500, rotation:720,scale:0.5, ease:Elastic.easeOut});
+
+	// grab array of elemnents with the same class while animating, 4th param for the interval 
+	TweenMax.staggerTo('.bball', 1, {y:500, rotation:360, delay:0, ease:Bounce.easeOut},0.1);
+
+	TweenMax.to('.bball, #sb', 1, {opacity: 0, delay: 3, onComplete: imDone});
+	// This is our custom callback function that gets fired via onComplete event Listener
+	function imDone(){
+		alert('I\'m Done');
+	}
+
+</script>
+
+</body>
+</html>
