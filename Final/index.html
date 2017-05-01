@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset="utf-8">
+    <title>ThisIsMe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Luvneesh Mugrai Profile">
+    <meta name="keywords" content="Profile, Game Engineer, Game Designer, Game Programmer">
+    <meta name="author" content="Luvneesh Mugrai">
+    <!-- CSS Below -->
+    <link rel="stylesheet" type="text/css" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <style type="text/css">
+    body,
+    html {
+        background-color: rgb(231, 231, 231);
+        width: 100%;
+        height: 100%;
+        font-family: "Open Sans", sans-serif;
+    }
+    
+    * {
+        /*border box will not add extra dimensions to your width/height when you add padding or border MARGINS STILL NEED TO BE CALCULATED*/
+        -webit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    /*for header*/
+    
+    .progress {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        height: 10px;
+        background-color: black;
+    }
+    
+    header h1,
+    main h2 {
+        font-family: "Helvetica", sans-serif;
+    }
+    
+    .img_circle {
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-left: 1%;
+        border-radius: 50%;
+        height: 60px;
+        float: left;
+    }
+    
+    .clear_fix::after {
+        display: block;
+        clear: both;
+        /* ensure some older compatability */
+        height: 0;
+        font-size: 0;
+        content: " ";
+        /* extra backup */
+        visibility: hidden;
+    }
+    
+    header .nav_bar {
+        width: 100%;
+        padding: 0 3%;
+        min-height: 60px;
+        position: fixed;
+        margin-bottom: 5px;
+        z-index: 10;
+        background-color: rgb(231, 231, 231);
+    }
+    
+    header .myNickName {
+        /*width: 33%;*/
+        float: left;
+        text-align: left;
+        line-height: 65px;
+        color: LightSlateGrey;
+        margin: 0 auto;
+        padding-left: 5px;
+    }
+    
+    header .myName {
+        /*width: 33%;*/
+        float: left;
+        text-align: left;
+        line-height: 65px;
+        color: LightSlateGrey;
+        margin: 0 auto;
+        padding-left: 5px;
+    }
+    
+    .hamburger_icon {
+        /*heig: ;ht: 3.0em;*/
+        width: 40px;
+    }
+    /*override padding for hamburer icon*/
+    
+    .navbar-nav li a {
+        padding: 10px;
+    }
+    
+    header h1,
+    main h2 {
+        font-weight: bold;
+    }
+    
+    header li {
+        text-align: center;
+    }
+    
+    header .cover_pic_parallax {
+        /*padding-top: 90px;*/
+        background-image: url('images/cover-pic.jpg');
+        height: 100vh;
+        /*the affect*/
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    header #arrow_bounce {
+        width: 3%;
+        height: auto;
+        position: relative;
+        top: 90vh;
+        left: 95vw;
+        /*-webkit-transition: all 500ms ease-in-out;
+		-moz-transition: all 750ms ease-in-out;
+		-ms-transition: all 750ms ease-in-out;
+		-o-transition: all 750ms ease-in-out;
+		transition: all 750ms ease-in-out;*/
+    }
+    
+    .lift {
+        /*bottom: 92vhpx;*/
+    }
+    
+    header #arrow_bounce i {
+        color: white;
+        text-decoration: none;
+    }
+    /*end for header*/
+    /*main body*/
+    
+    main h1 {
+        display: block;
+        text-align: center;
+        font-size: 3em;
+        -webkit-margin-before: 0.67em;
+        -webkit-margin-after: 0.67em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+    
+    main .row {
+        width: 100%;
+        /*margin-left: auto;
+		margin-right: auto;*/
+        margin: 0 auto;
+    }
+    
+    .polaroid {
+        max-width: 250px;
+        height: auto;
+        display: inline-block;
+        padding: 0px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 20px;
+        background-color: white;
+        color: black;
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .polaroid img {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        padding-bottom: 10px;
+    }
+    
+    main .polaroid h2 {
+        /*position: absolute;*/
+        text-align: center;
+        /*width: 100%;
+		bottom: 0px;
+		color: #888;*/
+    }
+    </style>
+    <!-- Fonts, thanks Google -->
+    <link href="https://fonts.googleapis.com/css?family=Helvetica" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Used for soical link icons -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="clear_fix">
+        <div class="nav_bar">
+            <a href="index.html"><img class="img_circle" src="images/logo.jpg"></a>
+            <h1 class="myName">LUVNEESH MUGRAI</h1>
+            <h1 class="myNickName"> &ltThisIsMe&gt   </h1>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- hamburger drop down menu -->
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="menu" aria-haspopup="true" aria-expanded="false"><img class="hamburger_icon" src="images/menu-icon.png"> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="cover_pic_parallax">
+            <!-- <img src="images/cover-pic.jpg"> -->
+            <div id="arrow_bounce">
+                <i class="fa fa-angle-down fa-2x"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="page_wrap">
+            <div class="body clear_fix">
+                <div class="starter_words">
+                    <h1>Visionary. Game Programmer. Virtual Reality.</h1>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!-- polariods -->
+                        <!-- if on phone show in 1(12), tablet show in 2(6), else 4(3)-->
+                        <!-- About me -->
+                        <div class="col-xs-12 col-sm-6 col-md-3 polaroid" >
+                        	<a href="#">
+	                            <img src="images/ThisIsMe.jpg" alt="Me">
+	                            <h2>About</h2>
+                            </a>
+                        </div>
+                        <!-- Projects -->
+                        <div class="col-xs-12 col-sm-6 col-md-3 polaroid">
+							<a href="#">
+	                            <img src="images/ThisIsMe.jpg">
+	                            <h2>Projects</h2>
+							</a>
+                        </div>
+                        <!-- Contact -->
+                        <div class="col-xs-12 col-sm-6 col-md-3 polaroid">
+							<a href="#">
+	                            <img src="images/ThisIsMe.jpg">
+	                            <h2>Contact</h2>
+							</a>
+                        </div>
+                        <!-- Resume -->
+                        <div class="col-xs-12 col-sm-6 col-md-3 polaroid">
+							<a href="#">
+	                            <img src="images/ThisIsMe.jpg">
+	                            <h2>Resume</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Javascript stuff here -->
+    <!-- timeline anomation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <!-- jqeury -->
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <script type="text/javascript" src="js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- animate the start of the page -->
+    <script type="text/javascript">
+    // wait for dom to load
+    $(document).ready(function() {
+        // animation of moving arrow downward
+        arrowBounce();
+
+
+
+    });
+
+    function arrowBounce() {
+        var arrow = document.getElementById('arrow_bounce');
+        TweenMax.fromTo(arrow, 0.75, {
+            y: -5
+        }, {
+            y: 5,
+            repeat: -1,
+            yoyo: true
+        });
+    }
+    </script>
+</body>
+
+</html>
