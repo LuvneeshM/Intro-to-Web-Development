@@ -25,16 +25,9 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
+
+    /*optimze for mobile first*/
     /*for header*/
-    
-    .progress {
-        position: relative;
-        z-index: 3;
-        width: 100%;
-        height: 10px;
-        background-color: black;
-    }
-    
     header h1,
     main h2 {
         font-family: "Helvetica", sans-serif;
@@ -44,7 +37,7 @@
         padding-top: 3px;
         padding-bottom: 3px;
         margin-left: 1%;
-        border-radius: 50%;
+        border-radius: 40%;
         height: 60px;
         float: left;
     }
@@ -70,41 +63,38 @@
         background-color: rgb(231, 231, 231);
     }
     
-    header .myNickName {
+    header .myNickName, header .myName {
         /*width: 33%;*/
         float: left;
         text-align: left;
-        line-height: 65px;
+        line-height: 40px;
         color: LightSlateGrey;
         margin: 0 auto;
-        padding-left: 5px;
-    }
-    
-    header .myName {
-        /*width: 33%;*/
-        float: left;
-        text-align: left;
-        line-height: 65px;
-        color: LightSlateGrey;
-        margin: 0 auto;
-        padding-left: 5px;
+        padding-left: 1%;
+        padding-right: 5%;
+        font-size: 1.5em;
     }
     
     .hamburger_icon {
-        /*heig: ;ht: 3.0em;*/
+        /*height: 3.0em;*/
         width: 40px;
+        float: right;
     }
     /*override padding for hamburer icon*/
-    
     .navbar-nav li a {
         padding: 10px;
+         background-color: transparent;
     }
     
+    .nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .nav>li>a:focus, .nav>li>a:hover{
+        background-color: transparent;
+    }
+
     header h1,
     main h2 {
         font-weight: bold;
     }
-    
+
     header li {
         text-align: center;
     }
@@ -129,15 +119,6 @@
         position: relative;
         top: 90vh;
         left: 95vw;
-        /*-webkit-transition: all 500ms ease-in-out;
-		-moz-transition: all 750ms ease-in-out;
-		-ms-transition: all 750ms ease-in-out;
-		-o-transition: all 750ms ease-in-out;
-		transition: all 750ms ease-in-out;*/
-    }
-    
-    .lift {
-        /*bottom: 92vhpx;*/
     }
     
     header #arrow_bounce i {
@@ -150,21 +131,14 @@
     main h1 {
         display: block;
         text-align: center;
-        font-size: 3em;
+        font-size: 2em;
         -webkit-margin-before: 0.67em;
         -webkit-margin-after: 0.67em;
         -webkit-margin-start: 0px;
         -webkit-margin-end: 0px;
         font-weight: bold;
     }
-    
-    main .row {
-        width: 100%;
-        /*margin-left: auto;
-		margin-right: auto;*/
-        margin: 0 auto;
-    }
-    
+        
     .polaroid {
         max-width: 250px;
         height: auto;
@@ -184,6 +158,7 @@
         margin-left: auto;
         margin-right: auto;
         max-width: 100%;
+        /*height: 200px;*/
         padding-bottom: 10px;
     }
     
@@ -194,6 +169,72 @@
 		bottom: 0px;
 		color: #888;*/
     }
+
+    /*flex it up*/
+    /*will be used for the polariods on this page */
+    /*and on the projects page*/
+    main .container div.flex-row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .container div.flex-item{
+        min-width: 200px;
+        flex: 1 1 100px;
+    }
+    
+    main .container .flex-item a{
+        text-decoration: none;
+        color: black;
+    }
+
+     main .container .flex-item a:hover{
+        color: green;
+     }
+
+    main .container .flex-item a:hover img{
+        opacity: 0.5;
+     }
+
+    /*larger phones + tablets 2 items per row*/
+    @media all and (min-width:  768px){
+         header .myNickName, header .myName {
+            line-height: 60px;
+            font-size: 2em;
+            padding-right: 0%;
+        }
+         main .container div.flex-row{
+            align-items: left;
+        }
+
+        main .container div.flex-item{
+            min-width: 40%;
+            flex: 1 1 100px;
+        }
+    }
+        /*desktops*/
+    @media all and (min-width:  1024px){
+        header .myNickName, header .myName {
+            line-height: 60px;
+            font-size: 3em;
+            padding-right: 0%;
+        }    
+        main h1 {
+            font-size: 3em;
+        }   
+        main .container div.flex-row{
+            align-items: left;
+        }
+
+        main .container div.flex-item{
+            min-width: 20%;
+            flex: 1 1 100px;
+        }
+    }
+
     </style>
     <!-- Fonts, thanks Google -->
     <link href="https://fonts.googleapis.com/css?family=Helvetica" rel="stylesheet">
@@ -234,34 +275,34 @@
                     <h1>Visionary. Game Programmer. Virtual Reality.</h1>
                 </div>
                 <div class="container">
-                    <div class="row">
+                    <div class="flex-row">
                         <!-- polariods -->
                         <!-- if on phone show in 1(12), tablet show in 2(6), else 4(3)-->
                         <!-- About me -->
-                        <div class="col-xs-12 col-sm-6 col-md-3 polaroid" >
+                        <div class="flex-item polaroid" >
                         	<a href="#">
-	                            <img src="images/ThisIsMe.jpg" alt="Me">
+	                            <img src="images/ThisIsMe2.1.jpg" alt="Me">
 	                            <h2>About</h2>
                             </a>
                         </div>
                         <!-- Projects -->
-                        <div class="col-xs-12 col-sm-6 col-md-3 polaroid">
+                        <div class="flex-item polaroid">
 							<a href="#">
-	                            <img src="images/ThisIsMe.jpg">
+	                            <img src="images/projects-img.PNG">
 	                            <h2>Projects</h2>
 							</a>
                         </div>
                         <!-- Contact -->
-                        <div class="col-xs-12 col-sm-6 col-md-3 polaroid">
+                        <div class="flex-item polaroid">
 							<a href="#">
 	                            <img src="images/ThisIsMe.jpg">
 	                            <h2>Contact</h2>
 							</a>
                         </div>
                         <!-- Resume -->
-                        <div class="col-xs-12 col-sm-6 col-md-3 polaroid">
+                        <div class="flex-item polaroid">
 							<a href="#">
-	                            <img src="images/ThisIsMe.jpg">
+	                            <img src="images/resume-img-icon.png">
 	                            <h2>Resume</h2>
                             </a>
                         </div>
