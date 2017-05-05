@@ -15,7 +15,6 @@
     <style type="text/css">
 
     /*main body*/
-    
     main h1 {
         display: block;
         text-align: center;
@@ -197,28 +196,6 @@
     <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <!-- bootstrap -->
     <script type="text/javascript" src="js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <!-- animate the start of the page -->
-    <script type="text/javascript">
-    // wait for dom to load
-    $(document).ready(function() {
-        // animation of moving arrow downward
-        arrowBounce();
-
-
-
-    });
-
-    function arrowBounce() {
-        var arrow = document.getElementById('arrow_bounce');
-        TweenMax.fromTo(arrow, 0.75, {
-            y: -5
-        }, {
-            y: 5,
-            repeat: -1,
-            yoyo: true
-        });
-    }
-    </script>
-</body>
+    <script type="text/javascript" src="js/javascript_stuff.js"></script>
 
 </html>
