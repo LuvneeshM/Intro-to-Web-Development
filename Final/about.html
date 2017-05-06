@@ -12,6 +12,11 @@
     <link rel="stylesheet" type="text/css" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <!-- header css -->
     <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/main_stuff.css">
+    <!-- Fonts, thanks Google -->
+    <link href="https://fonts.googleapis.com/css?family=Helvetica" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
     <style type="text/css">
     main div.info {
         padding-top: 75px;
@@ -40,40 +45,86 @@
         padding: 0% 3% 0% 3%;
         word-wrap: break-word;
     }
+    /*skills bars*/
     
     main .skill_bars {
         list-style: none;
+        padding: 0% 1.5% 0% 1.5%;
         /*margin: 6rem 0 3rem;*/
     }
     
-    main .skill_bars .progress {
+    main .skill_bars li {
+        height: 10px;
+        background: #a1a1a1;
+        width: 100%;
+        margin-bottom: 50px;
+        /*position: relative;*/
+    }
+    
+    main .skill_bars .progress_bar {
         background: #313131;
         position: relative;
         height: 100%;
     }
     
-    main .skill_bars .progress span {
+    main .skill_bars .progress_bar span {
         position: absolute;
         right: 0;
-        top: -3.6rem;
+        top: 25px;
         display: block;
-        font-family: "poppins-regular", sans-serif;
         color: white;
-        font-size: 1.1rem;
         line-height: 1;
         background: #313131;
         padding: .6rem .6rem;
         border-radius: 3px;
     }
     
-    main .skill_bars .progress span::after {
+    main .skill_bars .progress_bar span::after {
+        position: absolute;
         left: 50%;
-        bottom: -5px;
+        top: -10px;
         margin-left: -5px;
         border-right: 5px solid transparent;
         border-left: 5px solid transparent;
-        border-top: 5px solid #313131;
+        border-bottom: 5px solid #313131;
         content: "";
+    }
+    
+    main .skill_bars li .percent02 {
+        width: 2%;
+    }
+    
+    main .skill_bars li .percent40 {
+        width: 40%;
+    }
+    
+    main .skill_bars li .percent65 {
+        width: 65%;
+    }
+    
+    main .skill_bars li .percent75 {
+        width: 75%;
+    }
+    
+    main .skill_bars li .percent80 {
+        width: 80%;
+    }
+    
+    main .skill_bars li .percent85 {
+        width: 85%;
+    }
+    
+    main .skill_bars li .percent90 {
+        width: 90%;
+    }
+    
+    main .skill_bars li .percent95 {
+        width: 95%;
+    }
+
+    /*qualifications and experience*/
+    main div.experience{
+    	/*min-height: 100px;*/
     }
     
     @media all and (min-width: 768px) {
@@ -81,15 +132,13 @@
             float: left;
             width: 50%;
             height: auto;
-            padding: 3%;
-            padding-top: 2%;
+            padding: 2% 3% 2% 3%;
         }
         main .right_side {
             float: right;
             width: 50%;
             height: auto;
-            padding: 3%;
-            padding-top: 2%;
+            padding: 2% 3% 2% 3%;
             word-wrap: break-word;
         }
     }
@@ -100,15 +149,13 @@
             float: left;
             width: 50%;
             height: auto;
-            padding: 5%;
-            padding-top: 2%;
+            padding: 2% 3% 1% 5%;
         }
         main .right_side {
             float: right;
             width: 50%;
             height: auto;
-            padding: 5%;
-            padding-top: 2%;
+         	padding: 2% 5% 1% 3%;
             word-wrap: break-word;
         }
     }
@@ -126,7 +173,7 @@
                 <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="menu" aria-haspopup="true" aria-expanded="false"><img class="hamburger_icon" src="images/menu-icon.png"> </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">About</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="#">Projects</a></li>
                         <li><a href="#">FAQ</a></li>
                     </ul>
@@ -135,84 +182,119 @@
         </div>
     </header>
     <main>
-        <div class="info">
+        <!-- about me -->
+        <div class="info clear_fix">
             <h2 class="center">Who am I?</h2>
-            <p class="center some_spacing">I am currently a Junion attending New York University Tandon School of Engineering. I am pursing a Bachelor’s in Computer Science, with two minors in Game Engineering and Integrated Digital Media. </p>
+            <p class="center some_spacing">I am currently a Junior attending New York University Tandon School of Engineering. I am pursing a Bachelor’s in Computer Science, with two minors in Game Engineering and Integrated Digital Media. </p>
             <div class="left_side">
                 <h2 class="center">Profile </h2>
-                <p>I have been making strides to expand my knowledge and explore new areas, such as Web Development, Software Engineering, and Artificial Intelligence. For the prior two, I have been taking courses at my college and working on some projects, such as this website. As for the ladder of the three, I currently an artificial intelligence researching assistant at the Game Innovation Lab at NYU Tandon. I am responsible for developing an AI to mimic human player gameplay for a game, Awkward Date, created by the PhD student for whom I am working.</p>
+                <p>As an outlet for my curiosity and learning, I apply my understandings of theoretical aspects and implementations of algorithms in developing games. I have been making strides to expand my knowledge and explore areas, such as Web Development, Software Engineering, and Artificial Intelligence.</p>
+                <h2 class="center">Qualifications and Experience</h2>
+                <div class="experience clear_fix">
+                	<div class="gillyworks clear_fix">
+                		<div class="left_side">
+                			<h3><em>Gilly Works</em></h3>
+                		</div>
+                		<div class="right_side">
+                			<p><strong>Co-Founder and CTO</strong></p>
+                			<p>A small team of three friends attempting to form a startup in which we focus on developing fun and entertaining mobile apps for iOS and Android</p>
+                		</div>
+                	</div>
+                    <div class="awkward_date clear_fix">
+                        <div class="left_side">
+                            <h3><em>NYU Game Innovation Lab	</em></h3>
+                        </div>
+                        <div class="right_side">
+                            <p><strong>Artifical Intelligence Assistant Researcher</strong></p>
+                            <p>Responsible for developing an AI to mimic human player gameplay for Awkward Date, a game created by the PhD student for whom I am working</p>
+                        </div>
+                    </div>
+                    <div class="parks_people clear_fix">
+                    	 <div class="left_side">
+                            <h3><em>NYC Department of Parks and Recreation</em></h3>
+                        </div>
+                        <div class="right_side">
+                            <p><strong>Game Design Intern</strong></p>
+                            <p>Taught game design logic to a class of 25 youth and teen members and assisted them in creating their own video games using RPG Maker VX Ace</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="right_side">
-                <h2 class="center">Aspirations</h2>
-                <p>Watching Star Trek as a kid, I fell in love with the idea of a Holodeck and virtual reality. Now I aspire to not only enter the virtual reality industry, but also find that merger between virtual reality and gaming and break it wide open. I want to develop and immersive room that places you directly in the center of a game, is fully interactive and has the same feel as that from the Holodeck.</p>
                 <div class="skills">
-                    <h3>Skills</h3>
-                    <p>A List of skills</p>
+                    <h2 class="center">Skills</h2>
                     <ul class="skill_bars">
+                        <strong>C</strong>
                         <li>
-                            <strong>C</strong>
-                            <div class="progress">
+                            <div class="progress_bar percent40">
                                 <span>40%</span>
                             </div>
                         </li>
+                        <strong>C++</strong>
                         <li>
-                            <strong>C++</strong>
-                            <div class="progress">
-                                <span>40%</span>
+                            <div class="progress_bar percent85">
+                                <span>85%</span>
                             </div>
                         </li>
+                        <strong>C#</strong>
                         <li>
-                            <strong>C#</strong>
-                            <div class="progress">
-                                <span>40%</span>
+                            <div class="progress_bar percent80">
+                                <span>80%</span>
                             </div>
                         </li>
+                        <strong>Java</strong>
                         <li>
-                            <strong>Java</strong>
-                            <div class="progress">
-                                <span>40%</span>
+                            <div class="progress_bar percent75">
+                                <span>75%</span>
                             </div>
                         </li>
+                        <strong>Python</strong>
                         <li>
-                            <strong>Python</strong>
-                            <div class="progress">
-                                <span>40%</span>
+                            <div class="progress_bar percent75">
+                                <span>75%</span>
                             </div>
                         </li>
+                        <strong>HTML5</strong>
                         <li>
-                            <strong>HTML5</strong>
-                            <div class="progress">
-                                <span>40%</span>
+                            <div class="progress_bar percent85">
+                                <span>85%</span>
                             </div>
                         </li>
+                        <strong>CSS</strong>
                         <li>
-                            <strong>CSS</strong>
-                            <div class="progress">
-                                <span>40%</span>
+                            <div class="progress_bar percent80">
+                                <span>80%</span>
+                            </div>
+                        </li> <strong>JavaScript</strong>
+                        <li>
+                            <div class="progress_bar percent80">
+                                <span>80%</span>
                             </div>
                         </li>
+                        <strong>Unity</strong>
                         <li>
-                            <strong>JavaScript</strong>
-                            <div class="progress">
-                                <span>40%</span>
+                            <div class="progress_bar percent90">
+                                <span>90%</span>
                             </div>
                         </li>
+                        <strong>OpenGL</strong>
                         <li>
-                            <strong>Unity</strong>
-                            <div class="progress">
-                                <span>40%</span>
+                            <div class="progress_bar percent65">
+                                <span>65%</span>
                             </div>
                         </li>
+                        <strong>Assembly</strong>
                         <li>
-                            <strong>Assembly</strong>
-                            <div class="progress">
-                                <span>40%</span>
+                            <div class="progress_bar percent02">
+                                <span>2%</span>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+        <!-- Contact here too -->
+        <!-- ThisIsMe -->
         <div class="thats_all">
             <p class="center">So now you know, this is me.</p>
         </div>

@@ -77,6 +77,11 @@
         background-color: transparent;
     }
 
+    .navbar-nav .open .dropdown-menu {
+        float: right;
+        background-color: #fff;
+    }
+
     header h1,
     main h2 {
         font-weight: bold;
