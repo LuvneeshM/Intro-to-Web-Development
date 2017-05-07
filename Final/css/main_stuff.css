@@ -11,7 +11,7 @@
         -webkit-margin-end: 0px;
         font-weight: bold;
     }
-        
+       
     .polaroid {
         max-width: 250px;
         height: auto;
@@ -59,7 +59,7 @@
         flex: 1 1 100px;
     }
     
-    main .container .flex-item a{
+    main .container a{
         text-decoration: none;
         color: black;
     }
@@ -75,8 +75,9 @@
    
 
     /*coming from about.html*/
-    main div.info,
-    main div.faq {
+    main div.infoAboutMe,
+    main div.faq,
+    main div.projects {
         padding-top: 75px;
         height: auto;
     }
@@ -191,12 +192,17 @@
     	text-align: left;
     	font-weight: bold;
     }
+	
+	main p{
+		font-size: 18px;
+	}
 
-    main .faq p{
+    main .faq .left_side p,
+    main .faq .right_side p{
     	text-align: left;
     	padding-left: 5%;
     	padding-right: 5%;
-    	font-size: 18px;
+    	
     }
 
     main .faq ul{
@@ -205,6 +211,8 @@
     main .faq li{
     	text-align: left;
     	font-size: 18px;
+    	padding-left: 5%;
+    	padding-right: 5%;
     }
     main .faq li:before{
     	content: "»";
@@ -235,6 +243,14 @@
 	
 	main .ask_away h3{
 		margin: 10px 20px 10px 20px;
+	}
+
+	main .header_spacing h1{
+		margin: 0px 0px 10px;
+	}
+
+	main .projects  p.center{
+		margin-bottom: 15px;
 	}
 
     @media all and (min-width: 768px) {
@@ -272,6 +288,12 @@
     /*desktops*/
     
     @media all and (min-width: 1024px) {
+    	main div.infoAboutMe,
+	    main div.faq,
+	    main div.projects {
+	        padding-top: 60px;
+	        height: auto;
+	    }
     	main h1 {
             font-size: 3em;
         }   
