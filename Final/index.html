@@ -13,7 +13,6 @@
     <!-- header css -->
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/main_stuff.css">
-
     <!-- Fonts, thanks Google -->
     <link href="https://fonts.googleapis.com/css?family=Helvetica" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -21,7 +20,7 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class="home_page">
+<body class="home_page clear_fix">
     <header class="clear_fix">
         <div class="nav_bar">
             <a href="index.html"><img class="img_circle" src="images/logo.jpg"></a>
@@ -30,7 +29,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- hamburger drop down menu -->
                 <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="menu" aria-haspopup="true" aria-expanded="false"><img class="hamburger_icon" src="images/menu-icon.png"> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="menu" aria-haspopup="true" aria-expanded="false"><img class="hamburger_icon" src="images/menu-icon-white.png"> </a>
                     <ul class="dropdown-menu">
                         <li><a href="about.html">About</a></li>
                         <li><a href="projects.html">Projects</a></li>
@@ -57,31 +56,33 @@
                         <!-- polariods -->
                         <!-- if on phone show in 1(12), tablet show in 2(6), else 4(3)-->
                         <!-- About me -->
-                        <div class="flex-item polaroid" >
-                        	<a href="about.html">
-	                            <img src="images/ThisIsMe2.1.jpg" alt="Me">
-	                            <h2>About</h2>
+                        <div class="flex-item polaroid aboutP">
+                            <a href="about.html">
+                                <img src="images/ThisIsMe2.1.jpg" alt="Me">
+                                <h2>About</h2>
                             </a>
                         </div>
                         <!-- Projects -->
-                        <div class="flex-item polaroid">
-							<a href="projects.html">
-	                            <img src="images/projects-img.PNG">
-	                            <h2>Projects</h2>
-							</a>
+                        <div class="flex-item polaroid projP">
+                            <a href="projects.html">
+                                <img src="images/projects-img.PNG">
+                                <h2>Projects</h2>
+                            </a>
                         </div>
                         <!-- Contact -->
-                        <div class="flex-item polaroid">
-							<a href="faq.html">
-	                            <img src="images/ThisIsMe.jpg">
-	                            <h2>Q&A</h2>
-							</a>
+                        <div class="flex-item polaroid qaP">
+                            <a href="faq.html">
+                                <img src="images/qa.png">
+                                <!-- credit where credit is due -->
+                                <!-- Q&A by Milky - Digital innovation from the Noun Project -->
+                                <h2>Q&A</h2>
+                            </a>
                         </div>
                         <!-- Resume -->
-                        <div class="flex-item polaroid">
-							<a href="#">
-	                            <img src="images/resume-img-icon.PNG">
-	                            <h2>Resume</h2>
+                        <div class="flex-item polaroid resumeP">
+                            <a href="Luvneesh_Mugrai_Resume.pdf" target=_blank download>
+                                <img src="images/resume-img-icon.PNG">
+                                <h2>Resume</h2>
                             </a>
                         </div>
                     </div>
@@ -90,8 +91,9 @@
         </div>
     </main>
     <!-- Javascript stuff here -->
-    <!-- timeline anomation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/ScrollToPlugin.min.js"></script>
     <!-- jqeury -->
     <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <!-- bootstrap -->
